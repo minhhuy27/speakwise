@@ -58,8 +58,8 @@
 ---
 
 ## Phase 6: Data Backup, Netlify Configuration & Production Verification
-- [ ] `[TIER: Hydrogen]` Implement JSON Export / Import backup utility in `/settings` so users can safely back up or restore all `vocab`, `tests`, and `mistakes`.
-- [ ] `[TIER: Hydrogen]` Configure `netlify.toml` (`@netlify/plugin-nextjs`), verify `next build`, ESLint, TypeScript typecheck (`tsc --noEmit`), and full `vitest` suite pass cleanly.
+- [x] `[TIER: Hydrogen]` Implement JSON Export / Import backup utility in `/settings` so users can safely back up or restore all `vocab`, `tests`, and `mistakes`.
+- [x] `[TIER: Hydrogen]` Configure `netlify.toml` (`@netlify/plugin-nextjs`), verify `next build`, ESLint, TypeScript typecheck (`tsc --noEmit`), and full `vitest` suite pass cleanly.
 
 ---
 
@@ -67,4 +67,4 @@
 - *None.*
 
 ## Next Steps
-- Begin **Phase 6: Data Backup, Netlify Configuration & Production Verification**.
+- All MVP phases (Phase 0 – Phase 6) completed. Ready for Firebase & Netlify production deployment.

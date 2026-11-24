@@ -5,6 +5,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { Sparkles } from "lucide-react";
 import { toast } from "sonner";
 import { useAuth } from "@/components/providers/auth-provider";
+import { DataBackupCard } from "@/components/settings/data-backup-card";
 import { GoalSettingsForm } from "@/components/settings/goal-settings-form";
 import {
   Card,
@@ -116,6 +117,14 @@ function SettingsContent() {
           />
         </CardContent>
       </Card>
+
+      {!isOnboarding ? (
+        <DataBackupCard
+          uid={user.uid}
+          profile={profile}
+          onRestored={refreshProfile}
+        />
+      ) : null}
     </div>
   );
 }
