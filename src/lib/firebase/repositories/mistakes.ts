@@ -147,6 +147,31 @@ export async function listAllUserMistakes(
 }
 
 /**
+ * Subscribes to real-time updates of all mistake records for a user, ordered newest first.
+ */
+export function subscribeAllUserMistakes(
+  uid: string,
+  onNext: (mistakes: MistakeRecord[]) => void,
+  onError?: (err: Error) => void
+): () => void {
+  const db = getFirebaseDb();
+  if (!db) {
+    onNext([]);
+    return () => {};
+  }
+
+  return onSnapshot(
+    collection(db, "users", uid, "mistakes"),
+    (snapshot) => {
+      onNext(sortMistakesDesc(snapshot.docs.map(mapMistakeDoc)));
+    },
+    (error) => {
+      onError?.(error);
+    }
+  );
+}
+
+/**
  * Creates a mistake record and atomically increments the parent test's mistakeCount.
  */
 export async function createMistakeRecord(

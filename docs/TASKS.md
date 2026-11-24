@@ -51,9 +51,9 @@
 ---
 
 ## Phase 5: Readiness Analytics Dashboard & AI Coach
-- [ ] `[TIER: Hydrogen]` Build Overview Dashboard (`/`) combining Target vs. Current Score Hero, Exam Countdown, Daily SRS Queue CTA (`Review Now`), Readiness Preview Ring, and recent tests/mistakes.
-- [ ] `[TIER: Hydrogen]` Build Readiness & Analytics page (`/readiness`) with Readiness Gauge, 3 sub-score progress bars, Recharts Score Trend Line Chart, Part 1–7 Accuracy Bar Chart, and Error Category Breakdown.
-- [ ] `[TIER: Carbon]` Implement `POST /api/ai/readiness-insight` (English output) and integrate the **AI Coach Insight** card on `/readiness` with loading, error, and refresh states.
+- [x] `[TIER: Hydrogen]` Build Overview Dashboard (`/`) combining Target vs. Current Score Hero, Exam Countdown, Daily SRS Queue CTA (`Review Now`), Readiness Preview Ring, and recent tests/mistakes.
+- [x] `[TIER: Hydrogen]` Build Readiness & Analytics page (`/readiness`) with Readiness Gauge, 3 sub-score progress bars, Recharts Score Trend Line Chart, Part 1–7 Accuracy Bar Chart, and Error Category Breakdown.
+- [x] `[TIER: Carbon]` Implement `POST /api/ai/readiness-insight` (English output) and integrate the **AI Coach Insight** card on `/readiness` with loading, error, and refresh states.
 
 ---
 
@@ -67,4 +67,4 @@
 - *None.*
 
 ## Next Steps
-- Begin **Phase 5: Readiness Analytics Dashboard & AI Coach**.
+- Begin **Phase 6: Data Backup, Netlify Configuration & Production Verification**.
