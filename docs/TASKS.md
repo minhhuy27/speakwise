@@ -43,10 +43,10 @@
 ---
 
 ## Phase 4: TOEIC Test Tracker & Mistake Log Module
-- [ ] `[TIER: Hydrogen]` Implement Firestore repositories `src/lib/firebase/repositories/{tests,mistakes}.ts` and Zod validation schemas for `full_test` & `mini_or_part`.
-- [ ] `[TIER: Hydrogen]` Build Test History & Quick Test Logger (`/tests`) featuring 2-column Part 1–4 & Part 5–7 inputs and realtime sticky `/990` score preview + manual override toggle.
-- [ ] `[TIER: Hydrogen]` Build Test Detail & Mistake Log (`/tests/[testId]`) with Part 1–7 accuracy breakdown, `errorCategory` tagging, and 1-click **"+ Save to SRS"** linking `sourceTestId` & `sourceMistakeId`.
-- [ ] `[TIER: Carbon]` Implement `POST /api/ai/mistake-explain` (English output) and integrate optional **"Explain with AI"** trigger inside Mistake Log items.
+- [x] `[TIER: Hydrogen]` Implement Firestore repositories `src/lib/firebase/repositories/{tests,mistakes}.ts` and Zod validation schemas for `full_test` & `mini_or_part`.
+- [x] `[TIER: Hydrogen]` Build Test History & Quick Test Logger (`/tests`) featuring 2-column Part 1–4 & Part 5–7 inputs and realtime sticky `/990` score preview + manual override toggle.
+- [x] `[TIER: Hydrogen]` Build Test Detail & Mistake Log (`/tests/[testId]`) with Part 1–7 accuracy breakdown, `errorCategory` tagging, and 1-click **"+ Save to SRS"** linking `sourceTestId` & `sourceMistakeId`.
+- [x] `[TIER: Carbon]` Implement `POST /api/ai/mistake-explain` (English output) and integrate optional **"Explain with AI"** trigger inside Mistake Log items.
 
 ---
 
@@ -67,4 +67,4 @@
 - *None.*
 
 ## Next Steps
-- Begin **Phase 4: TOEIC Test Tracker & Mistake Log Module**.
+- Begin **Phase 5: Readiness Analytics Dashboard & AI Coach**.
