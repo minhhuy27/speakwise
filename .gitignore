@@ -1,0 +1,49 @@
+# Agent & local rules
+.antigravityrules
+.gemini/
+
+# Dependencies
+/node_modules
+/.pnp
+.pnp.*
+
+# Next.js build outputs
+/.next/
+/out/
+/build/
+/dist/
+
+# Netlify
+/.netlify/
+
+# Firebase local emulators & credentials
+.firebase/
+firebase-debug.log*
+firestore-debug.log*
+ui-debug.log*
+*firebase-adminsdk*.json
+*service-account*.json
+
+# Testing & coverage
+/coverage/
+.vitest/
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# TypeScript & package manager logs
+*.tsbuildinfo
+next-env.d.ts
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS & IDE metadata
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea/
