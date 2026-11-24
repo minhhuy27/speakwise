@@ -8,7 +8,7 @@
 | **Hosting & BFF** | **Netlify** (`@netlify/plugin-nextjs`) | Hosts static assets, Next.js pages, and `/api/**` Route Handlers as Netlify Serverless Functions (Free Tier). |
 | **Authentication** | **Firebase Authentication** (`GoogleAuthProvider`) | Passwordless Google Sign-In; client passes Firebase ID Token (JWT) for Firestore & API authorization. |
 | **Database** | **Cloud Firestore** (Firebase Spark Free Plan) | NoSQL document store strictly scoped per user under `users/{uid}/...` with client offline persistence. |
-| **AI & Dictionary** | **Google Gemini API** (`@google/genai`, `gemini-2.5-flash`) + **Free Dictionary API** | Server-side Gemini structured JSON generation via Next.js Route Handlers; `GEMINI_API_KEY` stays strictly server-only. |
+| **AI & Dictionary** | **Google Gemini API** (`@google/genai`, `gemini-3.6-flash`) + **Free Dictionary API** | Server-side Gemini structured JSON generation via Next.js Route Handlers; `GEMINI_API_KEY` stays strictly server-only. |
 | **Client Speech** | HTML5 `<audio>` + Browser `Web Speech API` (`window.speechSynthesis`) | Plays Dictionary `.mp3` pronunciation first; falls back to `en-US` / `en-GB` TTS synthesis. |
 | **Validation & Test** | `zod`, `react-hook-form`, `Vitest`, `@testing-library/react` | Strict runtime schema validation for forms & APIs; deterministic unit tests for domain engines. |
 
@@ -222,14 +222,14 @@ Every Route Handler under `src/app/api/ai/**`:
 1. Extracts `Authorization: Bearer <firebaseIdToken>` from request headers.
 2. Verifies the Firebase ID Token signature, `aud == NEXT_PUBLIC_FIREBASE_PROJECT_ID`, `iss`, and `exp` via `jose` against Google's public JWKS endpoint (`https://www.googleapis.com/service_accounts/v1/jwk/securetoken@system.gserviceaccount.com`) — requires **zero** Firebase Admin private key on Netlify.
 3. Validates request body with `zod`; rejects invalid payloads with `400` and unauthenticated requests with `401`.
-4. Calls Gemini `gemini-2.5-flash` with `responseMimeType: "application/json"` and strict schema enforcement.
+4. Calls Gemini `gemini-3.6-flash` with `responseMimeType: "application/json"` and strict schema enforcement.
 
 ### 4.1. `POST /api/ai/vocab-enrich`
 - **Request:**
   ```json
   { "word": "reimburse", "contextSentence": "Employees will be reimbursed for travel expenses." }
   ```
-- **Server Flow:** Parallel fetch to Free Dictionary API (`https://api.dictionaryapi.dev/api/v2/entries/en/reimburse`) for `ipa` + `audioUrl` AND Gemini `gemini-2.5-flash` for bilingual English + Vietnamese TOEIC-contextualized fields (if Dictionary API returns 404 for phrases/idioms, Gemini provides fallback `ipa` and `audioUrl` stays `null`).
+- **Server Flow:** Parallel fetch to Free Dictionary API (`https://api.dictionaryapi.dev/api/v2/entries/en/reimburse`) for `ipa` + `audioUrl` AND Gemini `gemini-3.6-flash` for bilingual English + Vietnamese TOEIC-contextualized fields (if Dictionary API returns 404 for phrases/idioms, Gemini provides fallback `ipa` and `audioUrl` stays `null`).
 - **Response (`200 OK`):**
   ```json
   {
