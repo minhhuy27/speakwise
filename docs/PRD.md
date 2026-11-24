@@ -31,7 +31,7 @@ Right after first sign-in (and editable anytime in Settings), users configure th
 - The user enters an English word or phrase (with an optional context sentence).
 - The backend route combines:
   1. **Free Dictionary API:** Fetches standard `/IPA/` transcription and native `.mp3` pronunciation `audioUrl`.
-  2. **Gemini API (`gemini-2.5-flash`):** Generates structured JSON containing `partOfSpeech`, **bilingual definitions** (`meaningEn` in concise TOEIC business/workplace English + `meaningVi` in accurate Vietnamese), a TOEIC-style example sentence with Vietnamese translation (`exampleEn`, `exampleVi`), `wordFamily`, `collocations`, and `suggestedTags`.
+  2. **Gemini API (`gemini-3.6-flash`):** Generates structured JSON containing `partOfSpeech`, **bilingual definitions** (`meaningEn` in concise TOEIC business/workplace English + `meaningVi` in accurate Vietnamese), a TOEIC-style example sentence with Vietnamese translation (`exampleEn`, `exampleVi`), `wordFamily`, `collocations`, and `suggestedTags`.
 - All auto-filled fields remain editable before saving to the user's vocabulary bank.
 
 ### 3.2. Pronunciation Playback
