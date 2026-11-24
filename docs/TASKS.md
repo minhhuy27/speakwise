@@ -26,10 +26,10 @@
 ---
 
 ## Phase 2: Core Pure Engines & Unit Testing
-- [ ] `[TIER: Carbon]` Implement `src/lib/engines/srs.ts` (`calculateNextSrsState`, `buildDailyStudyQueue`) with full SM-2 state transitions, `mastered` promotion, and `leech` tracking (`lapses >= 4`).
-- [ ] `[TIER: Carbon]` Implement `src/lib/engines/score-converter.ts` (`PART_MAX_QUESTIONS`, `estimateToeicScore`) with ETS-calibrated Listening/Reading 5–495 conversion tables.
-- [ ] `[TIER: Carbon]` Implement `src/lib/engines/readiness.ts` (`evaluateExamReadiness`) with weighted score average, standard deviation stability, pacing/timeline scoring, 4-tier verdict mapping, and Part weakness detection.
-- [ ] `[TIER: Carbon]` Write comprehensive Vitest unit test suites under `src/lib/engines/__tests__/` covering boundary cases (0/100/200 raw scores, SM-2 grade 0–3 transitions, `< 3` vs `>= 3` full tests) and verify 100% pass.
+- [x] `[TIER: Carbon]` Implement `src/lib/engines/srs.ts` (`calculateNextSrsState`, `buildDailyStudyQueue`) with full SM-2 state transitions, `mastered` promotion, and `leech` tracking (`lapses >= 4`).
+- [x] `[TIER: Carbon]` Implement `src/lib/engines/score-converter.ts` (`PART_MAX_QUESTIONS`, `estimateToeicScore`) with ETS-calibrated Listening/Reading 5–495 conversion tables.
+- [x] `[TIER: Carbon]` Implement `src/lib/engines/readiness.ts` (`evaluateExamReadiness`) with weighted score average, standard deviation stability, pacing/timeline scoring, 4-tier verdict mapping, and Part weakness detection.
+- [x] `[TIER: Carbon]` Write comprehensive Vitest unit test suites under `src/lib/engines/__tests__/` covering boundary cases (0/100/200 raw scores, SM-2 grade 0–3 transitions, `< 3` vs `>= 3` full tests) and verify 100% pass.
 
 ---
 
@@ -67,4 +67,4 @@
 - *None.*
 
 ## Next Steps
-- Begin **Phase 2: Core Pure Engines & Unit Testing** (`srs.ts`, `score-converter.ts`, `readiness.ts`).
+- Begin **Phase 3: Smart Vocabulary & SRS Review Module**.
