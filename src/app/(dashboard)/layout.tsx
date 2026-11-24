@@ -78,6 +78,10 @@ export default function DashboardLayout({
     return <DashboardShellSkeleton />;
   }
 
+  if (pathname === "/vocab/review") {
+    return <>{children}</>;
+  }
+
   return (
     <div className="min-h-screen bg-background">
       <Sidebar />

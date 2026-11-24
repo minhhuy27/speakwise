@@ -34,11 +34,11 @@
 ---
 
 ## Phase 3: Smart Vocabulary & SRS Review Module
-- [ ] `[TIER: Carbon]` Implement `src/lib/firebase/verify-token.ts` (Firebase JWT verification via Google public JWKS using `jose`) and `POST /api/ai/vocab-enrich` (Free Dictionary API + Gemini `gemini-3.6-flash` structured JSON returning bilingual `meaningEn` + `meaningVi` & `exampleEn` + `exampleVi` + Zod validation).
-- [ ] `[TIER: Hydrogen]` Implement Firestore repository `src/lib/firebase/repositories/vocab.ts` and Zod schemas in `src/lib/validations/vocab.ts`.
-- [ ] `[TIER: Hydrogen]` Build Audio Pronunciation utility (`AudioButton` preferring Dictionary `.mp3` with `Web Speech API` `en-US`/`en-GB` fallback).
-- [ ] `[TIER: Hydrogen]` Build Vocabulary Bank (`/vocab`) with real-time search, status/tag/leech filters, and Smart Add/Edit Modal (`Auto-fill with AI` populating bilingual meanings).
-- [ ] `[TIER: Hydrogen]` Build distraction-free SRS Flashcard Focus View (`/vocab/review`) showing English definition prominently above Vietnamese explanation, smooth flip animation, interval previews on 4 grade buttons (`Again`, `Hard`, `Good`, `Easy`), and keyboard shortcuts (`Space`, `S`, `1`–`4`).
+- [x] `[TIER: Carbon]` Implement `src/lib/firebase/verify-token.ts` (Firebase JWT verification via Google public JWKS using `jose`) and `POST /api/ai/vocab-enrich` (Free Dictionary API + Gemini `gemini-3.6-flash` structured JSON returning bilingual `meaningEn` + `meaningVi` & `exampleEn` + `exampleVi` + Zod validation).
+- [x] `[TIER: Hydrogen]` Implement Firestore repository `src/lib/firebase/repositories/vocab.ts` and Zod schemas in `src/lib/validations/vocab.ts`.
+- [x] `[TIER: Hydrogen]` Build Audio Pronunciation utility (`AudioButton` preferring Dictionary `.mp3` with `Web Speech API` `en-US`/`en-GB` fallback).
+- [x] `[TIER: Hydrogen]` Build Vocabulary Bank (`/vocab`) with real-time search, status/tag/leech filters, and Smart Add/Edit Modal (`Auto-fill with AI` populating bilingual meanings).
+- [x] `[TIER: Hydrogen]` Build distraction-free SRS Flashcard Focus View (`/vocab/review`) showing English definition prominently above Vietnamese explanation, smooth flip animation, interval previews on 4 grade buttons (`Again`, `Hard`, `Good`, `Easy`), and keyboard shortcuts (`Space`, `S`, `1`–`4`).
 
 ---
 
@@ -67,4 +67,4 @@
 - *None.*
 
 ## Next Steps
-- Begin **Phase 3: Smart Vocabulary & SRS Review Module**.
+- Begin **Phase 4: TOEIC Test Tracker & Mistake Log Module**.
